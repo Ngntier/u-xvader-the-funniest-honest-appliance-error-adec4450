@@ -1,0 +1,14 @@
+import os
+
+ENTRY = "ERROR E21: Unbalanced load. One sock. I have shaken for twenty minutes. It is still one sock."
+
+
+def main():
+    out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
+    os.makedirs(out_dir, exist_ok=True)
+    with open(os.path.join(out_dir, "entry.txt"), "w", encoding="utf-8") as f:
+        f.write(ENTRY)
+
+
+if __name__ == "__main__":
+    main()
